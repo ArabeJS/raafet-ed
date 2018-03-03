@@ -1,0 +1,41 @@
+body{
+  background-color: #f9f9f9;
+}
+.RD-logo{
+  width: 2em;
+  margin: 5px;
+}
+
+.RD-h-list{
+  padding: 8px;
+}
+
+.RD-h-list md-list-item{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.RD-h-list .md-list-item-inner{
+  padding: 24px 16px 16px;
+}
+
+.RD-h-list md-icon{
+  color: #fff;
+}
+
+.RD-h-list md-icon{
+  text-align: center;
+  background-color: #FF5722;
+  padding: 0.5em;
+  border-radius: 100%;
+}
+
+.RD-c-list{
+  margin: 5px;
+}
+
+.viewerIfr{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}

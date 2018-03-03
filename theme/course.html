@@ -1,0 +1,15 @@
+<md-list class="RD-c-list" ng-repeat="tpc in tpcs">
+  <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+      <h2 flex md-truncate>{{tpc.name}}</h2>
+    </div>
+  </md-toolbar>
+  <md-subheader class="md-no-sticky">{{tpc.modules.summary}}</md-subheader>
+  <md-list-item ng-repeat="sec in tpc.modules.sections"
+                
+                ng-click="go('viewer/' + b64.encode(sec.url))">
+    <i class="material-icons">insert_drive_file</i>
+    <p>{{sec.name}}</p>
+  </md-list-item>
+
+</md-list>

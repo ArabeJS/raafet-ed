@@ -1,0 +1,8 @@
+<md-list class="RD-h-list">
+  <md-list-item md-colors="{{color.blue}}" ng-repeat="cat in cats"
+                class="wow bounceInRight" data-wow-duration="{{$index + 0.3}}s" data-wow-delay="0.3s"
+                ng-click="go('cat/'+cat.id)">
+    <md-icon class="material-icons">school</md-icon>
+    <p>{{cat.name}}</p>
+  </md-list-item>
+</md-list>

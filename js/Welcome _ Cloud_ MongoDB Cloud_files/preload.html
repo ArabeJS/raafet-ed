@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)https://cdn.getambassador.com/components/raf/preload.html?u=https%3A%2F%2Fcloud.mongodb.com&t=undefined&i=mbsy-preload -->
+<html class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  <meta name="viewport" content="width=device-width,initial-scale=1"> <!--<base href="/">--><base href="."> <script src="./us-communication.js.download"></script> </head> <body> <div id="scroller-element"></div> <script>var preloadIframe = window.mbsyIframe.connect();
+
+    preloadIframe.ready(function() {
+      'use strict';
+      // Polyfill assigns document.documentElement || document.body
+      // For use in smooth-scroller.js
+      var rootElem = null;
+
+      (function detectScrollerElement() {
+        var elem = document.getElementById('scroller-element');
+        elem.style.height = 100 + 'px';
+
+        window.scroll(10, 10);
+
+        if (document.documentElement.scrollTop === 10) {
+          // using documentElement to scroll is in accordance with the standard
+          rootElem = 'documentElement';
+        } else {
+          // But some in broswers/cases (as you can see from the CSSOM spec above)
+          // one must use the body instead to scroll
+          rootElem = 'body';
+        }
+
+        preloadIframe.sendMessage({action: 'scrollElementTest', rootElem: rootElem});
+      }());
+    });</script></body></html>

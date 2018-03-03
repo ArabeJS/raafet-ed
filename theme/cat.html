@@ -1,0 +1,9 @@
+<md-list class="RD-c-list">
+  <md-list-item ng-repeat="cat in cats"
+                class="wow bounceInRight" data-wow-duration="0.{{$index}}s" data-wow-delay="0.3s"
+                ng-click="go('course/'+cat.id)">
+    <i class="material-icons">folder_shared</i>
+    <p>{{cat.name}}</p>
+  </md-list-item>
+
+</md-list>
